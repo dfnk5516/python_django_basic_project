@@ -25,7 +25,9 @@ SECRET_KEY = '(-qm5nt)t17yd4bq4!m+-u)#rq1%j947g&fn)_g9fpesq2kn1c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+  'rayshoo.pythonanywhere.com' # 배포시 설정
+]
 
 
 # Application definition
@@ -121,6 +123,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static'),
+# ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static') # 배포시 이거로 수정
